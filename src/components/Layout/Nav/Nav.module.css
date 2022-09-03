@@ -1,0 +1,35 @@
+.nav {
+	background: #121212;
+	height: 3rem;
+	width: 100vw;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+}
+
+.logo-container {
+	height: 95%;
+	width: 8rem;
+	border-radius: 6px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+.logo-container .logo {
+	object-fit: cover;
+	max-width: 100%;
+	transform: scale(1.5);
+}
+.logo-container .logo:hover {
+	transform: scale(1.65);
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.icon {
+	font-size: 1.2rem;
+	background: none;
+	align-self: center;
+}

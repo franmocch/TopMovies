@@ -1,0 +1,13 @@
+.container {
+	width: 30rem;
+	height: 20rem;
+	position: absolute;
+	z-index: 1;
+}
+
+.searchMovie {
+	width: 100%;
+	height: 100%;
+	border-radius: 0 0 5px 5px;
+	background-image: linear-gradient(180deg, #1e1e1e, #000000);
+}
