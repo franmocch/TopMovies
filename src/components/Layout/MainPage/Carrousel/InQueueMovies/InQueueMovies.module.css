@@ -1,0 +1,86 @@
+.queue-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.browser {
+	color: #f0f0f0;
+	align-self: flex-start;
+	font-weight: 900;
+	font-size: 1.2rem;
+}
+.browser:hover {
+	color: #f5c518;
+	cursor: pointer;
+}
+
+.queue-container .upnext {
+	color: #f5c518;
+	font-weight: 700;
+	font-size: 1.1rem;
+	align-self: flex-start;
+}
+
+.queue {
+	width: 100%;
+	height: 85%;
+	background-image: linear-gradient(180deg, #121212, #000000);
+}
+.queue ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.queue ul li {
+	width: 100%;
+	height: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.queue ul li:hover {
+	transition: 1s;
+	box-shadow: 0 1px 5px 5px #f5c51821;
+}
+.queue ul li:hover .icon {
+	color: #f5c518;
+}
+
+.icon {
+	align-self: center;
+	color: #f0f0f0;
+	font-size: 1.7rem;
+}
+
+.animation-rigth {
+	animation: iniright 0.3s ease-in-out;
+	transform: translateY(0);
+}
+@keyframes iniright {
+	0% {
+		transform: translateY(150px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+.animation-left {
+	animation: inileft 0.3s ease-in-out;
+	transform: translateY(0);
+}
+@keyframes inileft {
+	0% {
+		transform: translateY(-150px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

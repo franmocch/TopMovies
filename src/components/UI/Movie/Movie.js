@@ -1,22 +1,22 @@
+import React from 'react';
 import styles from './Movie.module.css';
-import Card from '../Card/Card';
-import { BsPlayCircle } from 'react-icons/bs';
 
 export default function Movie(props) {
-	const { img, title, desc } = props;
+	const { img, title, children, column, scale, onClick } = props;
+
+	const movieContainer = `${styles['movie_container']} ${column &&
+		styles['column']} ${scale && styles['scale-img-effect']}`;
 
 	return (
-		<Card>
-			<div onClick={props.onClick} className={styles.movie}>
-				<div className={styles.imgContainer}>
-					<img src={img} alt='sds' />
-				</div>
-				<div className={styles.otherContainer}>
-					<BsPlayCircle className={styles.icon} />
-					<span className={styles.title}>{title}</span>
-					<span className={styles.desc}>{desc}</span>
-				</div>
+		<div className={movieContainer} onClick={onClick}>
+			<div className={styles['container_img']}>
+				<img className={styles['movie_img']} src={img} alt={title} />
 			</div>
-		</Card>
+
+			<div className={styles['movie_info']}>
+				<h2 className={styles['tittle']}>{title}</h2>
+				{children}
+			</div>
+		</div>
 	);
 }

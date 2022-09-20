@@ -1,0 +1,26 @@
+.container {
+	width: 20rem;
+	position: absolute;
+	z-index: 1;
+	background-color: #000000;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	right: 0;
+}
+
+.movies-list {
+	width: 100%;
+	max-height: 23rem;
+	display: flex;
+	flex-direction: column;
+	background-color: #000000;
+	overflow-y: scroll;
+}
+.movies-list::-webkit-scrollbar-thumb {
+	background: #a3a3a300;
+	border-radius: 0;
+}
+.container:hover .movies-list::-webkit-scrollbar-thumb {
+	background: #a3a3a3;
+}

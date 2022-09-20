@@ -1,0 +1,18 @@
+.carrousel-container {
+	width: 90vw;
+	height: 33rem;
+	align-self: center;
+	background: #000000;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.selected-movie {
+	width: 55%;
+	height: 90%;
+}
+
+.side-queue {
+	width: 25%;
+	height: 100%;
+}

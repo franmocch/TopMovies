@@ -8,28 +8,23 @@
 	position: relative;
 }
 
-.logo-container {
+.button-logo {
 	height: 95%;
 	width: 8rem;
 	border-radius: 6px;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
+	border: none;
+	cursor: pointer;
 }
 
-.logo-container .logo {
+.button-logo .logo {
 	object-fit: cover;
 	max-width: 100%;
 	transform: scale(1.5);
 }
-.logo-container .logo:hover {
+.button-logo .logo:hover {
 	transform: scale(1.65);
 	transition: 0.5s;
-	cursor: pointer;
-}
-
-.icon {
-	font-size: 1.2rem;
-	background: none;
-	align-self: center;
 }

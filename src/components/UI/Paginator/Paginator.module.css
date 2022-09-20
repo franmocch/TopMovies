@@ -1,0 +1,54 @@
+.pagination {
+	height: 2.5rem;
+	max-width: 17.5rem;
+	margin-bottom: 10px;
+}
+.pagination ul {
+	height: 100%;
+	border-radius: 50px;
+	color: #000;
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+.pagination ul li {
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+}
+.pagination ul li span {
+	margin: 2px;
+	height: 1.8rem;
+	width: 1.8rem;
+	border-radius: 50%;
+	line-height: 1.8rem;
+	text-align: center;
+}
+.minmax {
+	background: #f5c518b6;
+}
+.icon {
+	width: 3rem;
+}
+
+.before {
+	border-radius: 25px 5px 5px 25px;
+}
+.next {
+	border-radius: 5px 25px 25px 5px;
+}
+.pagination ul li .active {
+	line-height: 2.3rem;
+	height: 2.3rem;
+	width: 2.3rem;
+	font-size: 1.5rem;
+}
+
+.pagination ul li .active,
+.pagination ul li span:hover,
+.before:hover,
+.next:hover {
+	cursor: pointer;
+	color: #fff;
+	background-color: #f5c518;
+}

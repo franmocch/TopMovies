@@ -1,0 +1,9 @@
+.searched-movies {
+	height: auto;
+	width: 100%;
+	overflow: hidden;
+}
+.searched-movies li {
+	width: 100%;
+	height: 5rem;
+}

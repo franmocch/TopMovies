@@ -1,39 +1,48 @@
-import React, { useRef } from 'react';
+import React, { useRef, useImperativeHandle, forwardRef } from 'react';
 import styles from './Input.module.css';
 import { BsSearch } from 'react-icons/bs';
 
-export default function Input(props) {
-	const textValue = 'Search TopMovies';
+//Text
+const textValue = 'Search TopMovies';
+//////////////////////////////////////////
 
-	const searchValue = useRef();
+const Input = forwardRef((props, ref) => {
+	const { toSearchInput, actionOnChange } = props;
+	const toSearchRef = useRef();
 
-	const submitHandler = event => {
+	const onChangeHandler = event => {
 		event.preventDefault();
-
-		const enteredSearch = searchValue.current.value;
-
-		enteredSearch.trim().length > 0 && props.onValueToSearch(enteredSearch);
-
-		searchValue.current.value = '';
+		const value = toSearchRef.current.value;
+		toSearchInput(value);
+		actionOnChange();
 	};
 
-	return (
-		<div>
-			<div className={styles.search}>
-				<form onSubmit={submitHandler}>
-					<input
-						type='search'
-						id='search'
-						placeholder={textValue}
-						ref={searchValue}
-					/>
+	const inputInitialValue = () => {
+		toSearchRef.current.value = '';
+	};
+	useImperativeHandle(ref, () => {
+		return {
+			inputInitialValue
+		};
+	});
 
-					<button className={styles.button} type='submit'>
-						<BsSearch className={styles.icon} />
-					</button>
-				</form>
-			</div>
-			<div>{props.children}</div>
+	return (
+		<div className={styles.search}>
+			<form>
+				<input
+					type='search'
+					id='search'
+					placeholder={textValue}
+					ref={toSearchRef}
+					onChange={onChangeHandler}
+					autoComplete='off'
+				/>
+
+				<button className={styles.button}>
+					<BsSearch className={styles.icon} />
+				</button>
+			</form>
 		</div>
 	);
-}
+});
+export default Input;

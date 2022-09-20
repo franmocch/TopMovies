@@ -1,0 +1,51 @@
+.container {
+	width: auto;
+	height: auto;
+	display: flex;
+	justify-self: flex-end;
+	align-items: flex-start;
+	justify-content: flex-end;
+	cursor: pointer;
+}
+.no-bookmarked {
+	height: 100%;
+}
+.bookmarked {
+	width: 100%;
+	height: 100%;
+}
+.no-bookmarked:hover {
+	background-color: #f5c518;
+}
+
+.no-bookmarked:hover .to-bookmark {
+	color: #f0f0f0;
+}
+.to-bookmark {
+	color: #a3a3a3;
+	font-size: 1.8rem;
+}
+.to-bookmark:hover {
+	color: #f0f0f0;
+}
+
+.bgregular:hover {
+	background-color: #f0f0f0;
+}
+
+._1-5_rem {
+	color: #f5c518;
+	font-size: 1.5rem;
+}
+._1-8_rem {
+	color: #f5c518;
+	font-size: 1.8rem;
+}
+
+.on-absolute {
+	position: absolute;
+	right: 0;
+}
+.bgabsolute:hover {
+	color: #f5c5188b;
+}

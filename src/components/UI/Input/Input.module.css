@@ -1,6 +1,6 @@
 .search {
-	width: 30rem;
-	height: 1.8rem;
+	width: 90%;
+	height: 65%;
 	border: 2px solid #fff;
 	background: #fff;
 	border-radius: 2px;
@@ -20,7 +20,7 @@
 .search form input {
 	border: none;
 	height: 100%;
-	width: 90%;
+	width: 100%;
 	font-family: inherit;
 	font-size: 0.7rem;
 	font-weight: 400;
