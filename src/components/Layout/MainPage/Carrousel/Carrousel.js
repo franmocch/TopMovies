@@ -12,8 +12,11 @@ export default function Carrousel() {
 	const [animation, setAnimation] = useState('rigth');
 
 	useEffect(() => {
+		let loading = true;
+
 		const timer = setTimeout(() => {
 			setAnimation(null);
+			loading = false;
 		}, 300);
 
 		return () => {

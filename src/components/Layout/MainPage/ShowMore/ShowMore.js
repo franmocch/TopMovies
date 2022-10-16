@@ -4,11 +4,13 @@ import useApi from '../../../../hooks/useApi';
 import transformMovies from '../../../Helpers/transformMovies';
 import ShowMoreMovies from './ShowMoreMovies';
 
+const INITIAL_STATE = 1;
+
 export default function ShowMore() {
 	const location = useLocation();
 	const { query } = location.state;
 	const [moviesTransf, setMoviesTransf] = useState(null);
-	const [currentPage, setCurrentPage] = useState(1);
+	const [currentPage, setCurrentPage] = useState(INITIAL_STATE);
 	const [loading, setLoding] = useState(true);
 	const { error, sendRequest: fetchMovie } = useApi();
 
@@ -40,6 +42,7 @@ export default function ShowMore() {
 
 	useEffect(() => {
 		setMoviesTransf(null);
+		setCurrentPage(INITIAL_STATE);
 	}, [query]);
 
 	return (

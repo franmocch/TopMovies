@@ -1,4 +1,4 @@
-import React, { useRef, useImperativeHandle, forwardRef } from 'react';
+import React, { useRef } from 'react';
 import styles from './Input.module.css';
 import { BsSearch } from 'react-icons/bs';
 
@@ -6,7 +6,7 @@ import { BsSearch } from 'react-icons/bs';
 const textValue = 'Search TopMovies';
 //////////////////////////////////////////
 
-const Input = forwardRef((props, ref) => {
+const Input = props => {
 	const { toSearchInput, actionOnChange } = props;
 	const toSearchRef = useRef();
 
@@ -17,14 +17,12 @@ const Input = forwardRef((props, ref) => {
 		actionOnChange();
 	};
 
-	const inputInitialValue = () => {
-		toSearchRef.current.value = '';
+	const onClickHandler = () => {
+		if (toSearchRef.current.value.length > 0) {
+			const value = toSearchRef.current.value;
+			toSearchInput(value);
+		}
 	};
-	useImperativeHandle(ref, () => {
-		return {
-			inputInitialValue
-		};
-	});
 
 	return (
 		<div className={styles.search}>
@@ -36,6 +34,7 @@ const Input = forwardRef((props, ref) => {
 					ref={toSearchRef}
 					onChange={onChangeHandler}
 					autoComplete='off'
+					onClick={onClickHandler}
 				/>
 
 				<button className={styles.button}>
@@ -44,5 +43,5 @@ const Input = forwardRef((props, ref) => {
 			</form>
 		</div>
 	);
-});
+};
 export default Input;

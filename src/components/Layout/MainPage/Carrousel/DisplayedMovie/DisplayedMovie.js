@@ -32,7 +32,7 @@ export default function DisplayedMovie(props) {
 						width='100%'
 						height='100%'
 						volume={0.2}
-						//playing={start}
+						playing={start}
 					/>
 				</div>
 

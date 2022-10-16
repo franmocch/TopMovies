@@ -14,7 +14,7 @@ export default function FoundMovie(props) {
 
 	return (
 		<Card fixed={props.fixed} highlight={props.highlight}>
-			<Movie title={title} img={img}>
+			<Movie title={title} img={img} onClick={props.onClick}> 
 				<h4>{year}</h4>
 				<h4> {type}</h4>
 			</Movie>

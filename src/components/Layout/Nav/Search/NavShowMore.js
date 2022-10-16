@@ -8,7 +8,6 @@ export default function NavShowMore(props) {
 	const navigateHandler = () => {
 		props.visibilityHidden();
 		navigate('/more', { state: { query: props.query } });
-		props.inputRef.current.inputInitialValue();
 	};
 	return (
 		<Button

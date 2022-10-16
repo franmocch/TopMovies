@@ -4,8 +4,9 @@ import styles from './Movie.module.css';
 export default function Movie(props) {
 	const { img, title, children, column, scale, onClick } = props;
 
-	const movieContainer = `${styles['movie_container']} ${column &&
-		styles['column']} ${scale && styles['scale-img-effect']}`;
+	const movieContainer = `${styles['movie_container']} ${
+		column && styles['column']
+	} ${scale && styles['scale-img-effect']}`;
 
 	return (
 		<div className={movieContainer} onClick={onClick}>
